@@ -1,0 +1,3 @@
+- Responsive styling
+- Limit Impostor list to 3 entries
+- Bug when putting players back in the box
