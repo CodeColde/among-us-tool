@@ -11,7 +11,8 @@ export const colors = {
   greenDark: "#006600",
   green: "#00F000",
   greenLight: "#43B581",
-  yellow: "#FFFF05"
+  yellow: "#FFFF05",
+  red: "#B90000",
 }
 
 export const mediaQueries = {

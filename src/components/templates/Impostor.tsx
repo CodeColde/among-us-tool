@@ -14,7 +14,7 @@ const Impostor = () => {
   return (
     <Wrapper>
       <ListsWrapper>
-        <List title="Impostor" />
+        <List title="Impostor" showNums={3} />
         <List title="Can't kill" />
         <List title="Need to kill" />
         <List title="Dead" />
