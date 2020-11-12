@@ -8,11 +8,11 @@ const StartContainer = () => {
   const { state, startGameAction } = React.useContext(ActionsContext);
 
   return (
-    <Wrapper>
+    <Wrapper data-tut="reactour__start-game">
       <Button
         variant="large"
         onClick={() => startGameAction && state
-          && state.colors.length > 4
+          && state.colors.length > 3
           && !!state.playerType
           && startGameAction()}
       >

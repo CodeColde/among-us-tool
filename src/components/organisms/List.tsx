@@ -8,11 +8,11 @@ interface Props {
   title: string;
 }
 
-const List: React.FC<Props> = ({ title }) => {
+const List: React.FC<Props> = ({ title, ...rest }) => {
   const { state, manageColorsAction } = React.useContext(ActionsContext);
   const colorArray = state ? state.colors.filter(color => color.list === title) : [];
   return (
-    <div>
+    <div {...rest}>
       <Heading>{title}</Heading>
       <DragContainer
         name={title}

@@ -47,3 +47,23 @@ p {
   color: #707070;
   margin: 1rem;
 }
+
+.reactour__helper--is-open {
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.reactour__helper--is-open > span {
+  background-color: #6B2FBC;
+}
+
+.reactour__dot--is-active {
+  background: #6B2FBC !important;
+}
+
+.reactour__close {
+  top: 12px !important;
+  right: 12px !important;
+  width: 11px !important;
+  height: 11px !important;
+}
