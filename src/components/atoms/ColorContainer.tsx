@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors, mediaQueries } from "../../theme";
 
-const ColorContainer = styled.div<{ swapInMobile?: boolean }>`
+const ColorContainer = styled.div<{ swapInMobile?: boolean, "data-tut"?: string }>`
   background-color: ${colors.blackLight};
   padding: 2rem;
   max-width: 540px;

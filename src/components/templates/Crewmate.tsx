@@ -12,8 +12,8 @@ const Crewmate = () => {
   const { endGameAction } = React.useContext(ActionsContext);
 
   return (
-    <Wrapper>
-      <ListsWrapper>
+    <Wrapper data-tut="reactour__crewmate-start">
+      <ListsWrapper data-tut="reactour__crewmate-boxes">
         <List title="Suspicious" />
         <List title="Clear" />
         <List title="Grouped" />
@@ -27,6 +27,7 @@ const Crewmate = () => {
             <Button
               variant="small"
               onClick={() => endGameAction()}
+              data-tut="reactour__crewmate-end-game"
             >
               End Game
             </Button>

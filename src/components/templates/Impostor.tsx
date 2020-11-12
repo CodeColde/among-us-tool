@@ -12,9 +12,9 @@ const Impostor = () => {
   const { endGameAction } = React.useContext(ActionsContext);
 
   return (
-    <Wrapper>
+    <Wrapper data-tut="reactour__impostor-start">
       <ListsWrapper>
-        <List title="Impostor" showNums={3} />
+        <List title="Impostor" showNums={3} data-tut="reactour__impostor-length" />
         <List title="Can't kill" />
         <List title="Need to kill" />
         <List title="Dead" />
