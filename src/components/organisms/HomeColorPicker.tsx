@@ -11,7 +11,7 @@ import NonDraggableColor from '../molecules/NonDraggableColor';
 const HomeColorPicker = () => {
   const { state, resetAction, manageColorsAction } = React.useContext(ActionsContext);
   return (
-    <ColorContainer swapInMobile>
+    <ColorContainer swapInMobile data-tut="reactour__player-selector">
       <Heading variant="Medium">Players</Heading>
       <Colors>
         {Object.keys(amongUsColors).map(color => (

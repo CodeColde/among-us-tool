@@ -7,7 +7,7 @@ const TypeSelector = () => {
   const { state } = React.useContext(ActionsContext);
 
   return (
-    <Wrapper>
+    <Wrapper data-tut="reactour__select-player-type">
       <PlayerTypeButton
         active={state ? state.playerType : ""}
         type="Crewmate"

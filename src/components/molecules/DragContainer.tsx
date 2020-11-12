@@ -12,12 +12,14 @@ interface Props {
   colorsArray?: Array<IColors>;
   name: string;
   variant?: Variant;
+  dataTut?: string;
 }
 
 const DragContainer: React.FC<Props> = ({
   colorsArray,
   name,
   variant = "default",
+  dataTut,
   children
 }) => {
   const [{ canDrop, isOver }, drop] = useDrop({
@@ -36,6 +38,7 @@ const DragContainer: React.FC<Props> = ({
       isActive={isActive}
       colorsArray={colorsArray}
       variant={variant}
+      data-tut={dataTut}
     >
       {!!children
         ? children

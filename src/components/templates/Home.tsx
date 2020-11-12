@@ -14,7 +14,7 @@ const Home = () => {
     <FullWrapper>
       <Wrapper>
         <DetailsContainer>
-          <Heading>Among Us Sus Tool</Heading>
+          <Heading data-tut="reactour__title">Among Us Sus Tool</Heading>
           <AddPlayers />
           <TypeSelector />
           <StartContainer />
