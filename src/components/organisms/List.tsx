@@ -20,11 +20,9 @@ const List: React.FC<Props> = ({ title, showNums, ...rest }) => {
         {title}
         {" "}
         {showNums && colorArray.length > 0 && (
-          <>
-            <Total length={colorArray.length}>
-              ({colorArray.length}/{showNums})
-            </Total>
-          </>
+          <Total length={colorArray.length}>
+            ({colorArray.length}/{showNums})
+          </Total>
         )}
       </Heading>
       <DragContainer
