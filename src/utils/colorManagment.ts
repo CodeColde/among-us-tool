@@ -20,7 +20,6 @@ const manageColors: IManageColors = (state, color, list = "") => {
       if (state[colorIndex].list === "" && !list) {
         return [...state.filter(c => c.color !== color)]
       } else {
-        console.log(impostorListCount, list);
         if (impostorListCount >= 3 && list === "Impostor") {
           screenshake();
         }
