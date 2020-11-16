@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import ActionsContext from '../../reducer/handlerContext';
+import ActionsContext from '../../contexts/handlerContext';
 import { mediaQueries } from '../../theme';
+import screenshake from '../../utils/screenshake';
 import Button from '../atoms/Button';
 
 const StartContainer = () => {
@@ -11,10 +12,13 @@ const StartContainer = () => {
     <Wrapper data-tut="reactour__start-game">
       <Button
         variant="large"
-        onClick={() => startGameAction && state
-          && state.colors.length > 3
-          && !!state.playerType
-          && startGameAction()}
+        onClick={() => {
+          if (!startGameAction || !state || state.colors.length <= 3 || !state.playerType) {
+            screenshake();
+            return;
+          }
+          startGameAction()
+        }}
       >
         Start
       </Button>

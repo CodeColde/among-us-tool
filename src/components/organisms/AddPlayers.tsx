@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ActionsContext from '../../reducer/handlerContext';
+import ActionsContext from '../../contexts/handlerContext';
 import { colors } from '../../theme';
 import ColorSquare from '../atoms/ColorSquare';
 import DragContainer from '../molecules/DragContainer';
