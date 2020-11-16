@@ -1,6 +1,6 @@
 import React from 'react';
 import { IPlayerType } from '../../entities';
-import ActionsContext from '../../reducer/handlerContext';
+import ActionsContext from '../../contexts/handlerContext';
 import Button from '../atoms/Button';
 
 interface Props {

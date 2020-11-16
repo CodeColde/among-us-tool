@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ActionsContext from '../../reducer/handlerContext';
+import ActionsContext from '../../contexts/handlerContext';
 import { mediaQueries } from '../../theme';
 import Button from '../atoms/Button';
 import Heading from '../atoms/Heading';

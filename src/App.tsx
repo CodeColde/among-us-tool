@@ -8,7 +8,7 @@ import Impostor from './components/templates/Impostor';
 import { IPlayerType } from './entities';
 import { initialState, lobbyReducer } from './reducer';
 import { MANAGE_COLORS, RESET, SET_GAME_START, SET_PLAYER_TYPE, SET_GAME_OVER } from './reducer/actions';
-import ActionsContext from './reducer/handlerContext';
+import ActionsContext from './contexts/handlerContext';
 import steps from './tour/steps';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
     : "home";
   const tourSteps = steps(state, dispatch);
   return (
-    <div className="App">
+    <div className="App" id="App">
       <Tour
         steps={tourSteps}
         isOpen={isPlayerNew}

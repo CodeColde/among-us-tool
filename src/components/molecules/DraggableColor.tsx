@@ -1,8 +1,9 @@
 import React from 'react';
 import { DragSourceMonitor, useDrag } from 'react-dnd';
 import { ItemTypes } from '../../entities';
-import ActionsContext from '../../reducer/handlerContext';
+import ActionsContext from '../../contexts/handlerContext';
 import ColorSquare from '../atoms/ColorSquare';
+import screenshake from '../../utils/screenshake';
 
 interface Props {
   color: string;
@@ -20,6 +21,7 @@ const DraggableColor: React.FC<Props> = ({
       const dropResult = monitor.getDropResult()
       if (dropResult && state) {
         const impostorCheck = state.colors.filter(el => el.list === "Impostor").length > 2 && dropResult.name === "Impostor";
+        impostorCheck && screenshake();
         !impostorCheck && manageColorsAction && manageColorsAction(dropResult.name);
       }
     },

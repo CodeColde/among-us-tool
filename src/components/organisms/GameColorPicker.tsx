@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDrop } from 'react-dnd';
 import { ItemTypes } from '../../entities';
-import ActionsContext from '../../reducer/handlerContext';
+import ActionsContext from '../../contexts/handlerContext';
 import ColorContainer from '../atoms/ColorContainer';
 import Heading from '../atoms/Heading';
 import DraggableColor from '../molecules/DraggableColor';

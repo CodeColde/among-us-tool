@@ -1,4 +1,5 @@
 import { IColors } from "../entities";
+import screenshake from "./screenshake";
 
 type IManageColors = (state: Array<IColors>, color: string, list?: string) => Array<IColors>
 
@@ -19,6 +20,10 @@ const manageColors: IManageColors = (state, color, list = "") => {
       if (state[colorIndex].list === "" && !list) {
         return [...state.filter(c => c.color !== color)]
       } else {
+        console.log(impostorListCount, list);
+        if (impostorListCount >= 3 && list === "Impostor") {
+          screenshake();
+        }
         if ((impostorListCount < 3 && list === "Impostor") || list !== "Impostor") {
           return [...state.map((obj: IColors, i) => i === colorIndex ? baseObj : obj)]
         }

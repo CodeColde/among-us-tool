@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ActionsContext from '../../reducer/handlerContext';
+import ActionsContext from '../../contexts/handlerContext';
 import { colors } from '../../theme';
 import Heading from '../atoms/Heading';
 import DragContainer from '../molecules/DragContainer';
@@ -12,7 +12,7 @@ interface Props {
 }
 
 const List: React.FC<Props> = ({ title, showNums, ...rest }) => {
-  const { state, manageColorsAction } = React.useContext(ActionsContext);
+  const { state } = React.useContext(ActionsContext);
   const colorArray = state ? state.colors.filter(color => color.list === title) : [];
   return (
     <div {...rest}>
@@ -34,7 +34,6 @@ const List: React.FC<Props> = ({ title, showNums, ...rest }) => {
           <DraggableColor
             key={color.color}
             color={color.color}
-            manageColorsAction={(list) => manageColorsAction && manageColorsAction(color.color, list)}
           />
         ))}
       </DragContainer>
