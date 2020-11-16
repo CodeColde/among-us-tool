@@ -12,7 +12,7 @@ interface Props {
 }
 
 const List: React.FC<Props> = ({ title, showNums, ...rest }) => {
-  const { state } = React.useContext(ActionsContext);
+  const { state, manageColorsAction } = React.useContext(ActionsContext);
   const colorArray = state ? state.colors.filter(color => color.list === title) : [];
   return (
     <div {...rest}>
@@ -34,6 +34,9 @@ const List: React.FC<Props> = ({ title, showNums, ...rest }) => {
           <DraggableColor
             key={color.color}
             color={color.color}
+            manageColorsAction={(list) => {
+              manageColorsAction && manageColorsAction(color.color, list)
+            }}
           />
         ))}
       </DragContainer>
