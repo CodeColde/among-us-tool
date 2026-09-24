@@ -10,6 +10,16 @@
       content="The Among Us tool to help sus out your friends, or plot your murders more efficiently!"
     />
     <title>Among Us Sus Tool</title>
+    <!-- Google tag (gtag.js) - shared with hayofriese.dev; filter by hostname in GA4 reports -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47L0679HQF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+        gtag('config', 'G-47L0679HQF');
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
